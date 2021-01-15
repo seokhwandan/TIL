@@ -14,12 +14,21 @@
   $ git config --global user.email "edu@hphk.kr"
   ```
 
+
+
 ## Git 기본
 
 - `git init` 해당 디렉토리를 Git이 관리하도록 초기화
 - `git add` 파일명 커밋할 목록에 추가
 - `git commit -m "커밋 메시지"` (히스토리의 한 단위) 만들기
 - `git push origin master` 현재까지의 역사(commits)가 기록되어 있는 곳에 새로 생성한 커밋 반영
+
+- `git pull origin master` remote 와 로컬 git 의 버전을 맞추는 명령어 (강의장과 집을 왕복하면서 두개의 컴퓨터로 작업할 때 필수인 명령어)
+  - git work flow
+    1. `git pull origin master`
+    2. `git add .`
+    3. `git commit -m 'message'`
+    4. `git push origin master`
 
 
 
@@ -53,9 +62,13 @@ origin  https://github.com/seokhwandan/TIL.git (push)
 
 `esc` 를 누르고 `:q` 를 누르면 된다!
 
+
+
 ## git init 은 상위 폴더에서 !
 
 - 상위 폴더에 `.git` 폴더가 있는 경우는 하위 폴더에서 `git init` 을 하지 않는다.
+
+
 
 ## 집과 강의장 버전을 맞추자!
 
