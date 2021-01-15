@@ -33,6 +33,15 @@
 - 같은 작업물을 기반으로 동시에 다양한 작업을 할 수 있게 만들어 주는 기능
 - 독립적인 작업 영역 안에서 마음대로 소스코드를 변경할 수 있다. 분리된 작업 영역에서 변경된 내용은 추후에 기존 버전과 비교해서 새로운 하나의 버전을 만들어 낼 수 있다.
 
+
+
+## 리모트 확인하는 명령어
+
+`git remote -v`
+
+origin  https://github.com/seokhwandan/TIL.git (fetch)
+origin  https://github.com/seokhwandan/TIL.git (push)
+
 ---
 
 
