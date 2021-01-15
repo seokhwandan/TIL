@@ -49,9 +49,15 @@ origin  https://github.com/seokhwandan/TIL.git (push)
 
 
 
+## vim을 나가려면
+
+`esc` 를 누르고 `:q` 를 누르면 된다!
+
 ## git init 은 상위 폴더에서 !
 
 - 상위 폴더에 `.git` 폴더가 있는 경우는 하위 폴더에서 `git init` 을 하지 않는다.
+
+
 
 ---
 
