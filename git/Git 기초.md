@@ -57,6 +57,10 @@ origin  https://github.com/seokhwandan/TIL.git (push)
 
 - 상위 폴더에 `.git` 폴더가 있는 경우는 하위 폴더에서 `git init` 을 하지 않는다.
 
+## 집과 강의장 버전을 맞추자!
+
+- 한쪽에서 수정을 했다면 `git pull origin master` 를 반드시 입력하자!
+
 
 
 ---
