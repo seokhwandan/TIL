@@ -50,8 +50,6 @@ origin  https://github.com/seokhwandan/TIL.git (push)
 
 ---
 
-
-
 오늘 것은 새로웠다.
 
 언제 잔디를 심을려나..
