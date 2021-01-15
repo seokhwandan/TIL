@@ -8,8 +8,11 @@
 ## Git 설정
 
 - 전역 영역에서 commit 기록의 주인을 등록
+  
+  ```
   $ git config --global user.name "username"
   $ git config --global user.email "edu@hphk.kr"
+  ```
 
 ## Git 기본
 
@@ -39,8 +42,10 @@
 
 `git remote -v`
 
+```
 origin  https://github.com/seokhwandan/TIL.git (fetch)
 origin  https://github.com/seokhwandan/TIL.git (push)
+```
 
 
 
