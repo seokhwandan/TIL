@@ -12,6 +12,7 @@
 - html 은 기본적으로 `head` 태그와 `body` 태그가 있다.
 
   - 일반적으로 `head` 와 `body` 는 html 의 자식 태그이기는 하나 들여쓰기는 하지 않는다.
+  - `body` 는 브라우저 화면에 나타나는 정보이다.
 
 - `meta` 태그는 닫는 태그가 없다.
 
@@ -70,15 +71,19 @@
 
 - 그룹 컨텐츠
 
-  - `<p>`
-  - `<hr>`
-  - `<ol>`, `<ul>`
-  - `<pre>`, `<blockquote>`
+  - `<p>` 
+    -  문장 그룹 (paragraph)
+  - `<hr>` 
+    - 가로줄 태그
+  - `<ol>`, `<ul>` 
+    - list tag
+  - `<pre>`, `<blockquote>` 
+    - `<pre>` 는 문장의 있는 그대로를 보여주고 싶을 때 쓰는 태그
   - `<div>`
 
 - 텍스트 관련 요소
 
-  - `<a>`
+  - `<a>` : 하이퍼 링크 태그
   - `<b>` vs `<strong>`
     - `<b>` 는 그냥 굵게 / `strong` 은 굵게 + 의미를 강조
   - `<i>` vs `<em>`
@@ -90,8 +95,10 @@
 
   - `<tr>`, `<td>`, `<th>`
   - `<thead>`, `<tbody>`, `<tfoot>`
+    - table 전체의 머릿말, 몸통, 마지막 부분
   - `<caption>`
   - 셀 병합 속성 : `colspan`, `rowspan`
+    - colspan 은 좌우의 열 병합, rowspan 은 위 아래의 행 병합
   - scope 속성
   - `<col>`, `<colgroup>`
 
@@ -101,7 +108,9 @@
   - input 데이터를 받아서 서버로 보내주는 역할
   - `<form>` 의 기본 속성
     - `action`
+      - 요청할 주소(입력된 데이터와 함께 요청)
     - `method`
+      - http 메소드
 
 - input
 
@@ -112,6 +121,16 @@
   - `<input>`  공통 속성
 
     - `name`, `placeholder`
+      - input 에서의 `name` 은 python 에서 변수명과 동일하다고 생각하면 된다.
+      - `placeholder` 입력을 돕기위한 helper text (ex : id를 입력하세요.)
 
     - `required`
+      - 입력창을 비워둘 수 없게 끔 하는 속성
     - `autofocus`
+
+- select
+
+  - dropdown 박스 생성
+  - `option` 을 이용해 dropdown 박스안의 내용을 채울 수 있다.
+    - `option` *n 을 입력하면 한번에 n개의 `option` 을 생성할 수 있다.
+    - `disabled` 사용 시 선택할 수 없게 할 수 있다.
