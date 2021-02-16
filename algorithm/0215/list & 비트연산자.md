@@ -141,6 +141,8 @@ else:
 
 ## 이진 검색(Binary Search)
 
+- 반드시 정렬이 되어있어야 사용할 수 있다.
+
 ```python
 def bianrySearch(a, key):
     start <- 0 end <- length(a)-1
@@ -152,6 +154,31 @@ def bianrySearch(a, key):
             end = middle - 1
         else: start = middle + 1
             return false # 검색 실패
+```
+
+
+
+```python
+def binary_search(a, key): # arr, key
+    start = 0
+    end = len(a) - 1
+    while start <= end:
+        mid = (start + end) // 2
+        # mid일 때
+        if a[mid] == key:
+            return mid, True
+        elif a[mid] > key:
+            # end를 mid보다 하나 아래로
+            end = mid - 1
+        # key 클 때
+        # elif a[mid] < key:
+        else:
+            start = mid + 1
+    return (-1, False)
+
+arr = [2, 4, 7, 9, 11, 19, 23]
+key = 7
+print(binary_search(arr, key))
 ```
 
 
