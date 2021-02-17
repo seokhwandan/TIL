@@ -39,3 +39,27 @@ def BruteForce(p, t):
         return -1 # 검색 실패
 ```
 
+
+
+```python
+p = 'is' # 찾을 패턴
+t = 'This is a book~!' # 전체 택스트
+M = len(p) # 찾을 패턴의 길이
+N = len(t) # 전체 텍스트의 길이
+
+def BruteForce1(p, t):
+    N = len(t)
+    M = len(p)
+
+    for i in range(N - M + 1):
+        cnt = 0
+        for j in range(M):
+            if t[i + j] == p[j]:
+                cnt += 1
+            else:
+                break
+        if cnt == M:
+            return i
+    return -1
+```
+
