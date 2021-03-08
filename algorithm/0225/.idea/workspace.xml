@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9671eac8-ecdf-4301-887a-6425fc3c304a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../0222/fibo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../0222/fibo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4615_재미있는_오셀로_게임.py" beforeDir="false" afterPath="$PROJECT_DIR$/4615_재미있는_오셀로_게임.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,10 +15,10 @@
     <session id="1986608861">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -65,7 +66,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://C:/Program Files/Python35/Lib/codecs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
+            <state relative-caret-position="5529">
               <caret line="291" selection-start-line="291" selection-end-line="291" />
             </state>
           </provider>
@@ -75,7 +76,7 @@
         <entry file="file://$USER_HOME$/python_practice/algorithm/sw_expert_academy/D4/0217/1210.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -292,6 +293,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/python_practice/algorithm/sw_expert_academy/D4/0218/5432.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/1859_백만장자_프로젝트.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -299,12 +303,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/python_practice/algorithm/sw_expert_academy/D4/0218/5432.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://C:/Program Files/Python35/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
+        <state relative-caret-position="5529">
           <caret line="291" selection-start-line="291" selection-end-line="291" />
         </state>
       </provider>
@@ -312,7 +313,7 @@
     <entry file="file://$USER_HOME$/python_practice/algorithm/sw_expert_academy/D4/0217/1210.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
         </state>
       </provider>
     </entry>

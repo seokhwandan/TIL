@@ -40,6 +40,14 @@ for t in range(1, T + 1):
                             c = x + dc * j
                             board[r][c] = stone
 
+def othello(x, y, stone):
+    for i in range(8):
+        r = y + dx[i]
+        c = x + dy[i]
+        flag = False
+        
+        while 0 < r <= N nad 0 < y <= N:
+
     b, w = 0, 0
     for i in range(N):
         for j in range(N):
