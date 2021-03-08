@@ -13,4 +13,5 @@ def fibo2(n):
     if memo2[n] == -1:
         memo2[n] = fibo2(n - 1) + fibo2(n - 2)
     return memo2[n]
-print(fibo2(10))
+print(fibo2(20))
+print(memo2)
