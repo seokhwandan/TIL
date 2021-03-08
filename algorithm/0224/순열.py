@@ -30,7 +30,7 @@ def perm1(idx, ch):
         sel[idx] = arr[i]
         perm1(idx + 1, ch | (1 << i)) # ch 가 1회성으로 활용되기 때문에 원상복구가 필요없다.
 
-perm1(0, 0)
+# perm1(0, 0)
 
 #스왑
 def perm2(idx):
