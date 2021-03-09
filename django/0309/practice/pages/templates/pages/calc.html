@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% comment %} <p>{{ plus }}</p>
+  <p>{{ minus }}</p>
+  <p>{{ mul }}</p>
+  <p>{{ div }}</p> {% endcomment %}
+  {% for c in cal %}
+    <p>{{ c }}</p>
+  {% endfor %}
+{% endblock content %}

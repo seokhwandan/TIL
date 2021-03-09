@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>DTL Practice</h1>
+  <hr>
+  {% for food in foods %}
+    <p>{{ food }}</p>
+  {% endfor %}
+  <hr>
+
+  {% for food in foods %}
+    <p>{{ forloop.counter }}. {{ food }}</p>
+  {% endfor %}
+  <hr>
+
+  {% for user in user_list %}
+    <p>{{ user }}</p>
+    <p>테스트!! 출력이 되는가?</p>
+  {% empty %}
+    <p>리스트가 비어 있습니다.</p>
+  {% endfor %}
+  <hr>
+
+  {% for food in foods %}
+    {% if forloop.first %}
+      <p>{{ food }} + 고춧가루</p>
+    {% else %}
+      <p>{{ food }}</p>
+    {% endif %}
+  {% endfor %}
+  <hr>
+
+  {% if 'apple' in fruits %}
+    <p>사과다!</p>
+  {% endif %}
+  <hr>
+
+  {% for food in foods %}
+    {% if food|length > 3 %}
+      <p>{{ food }}</p>
+    {% endif %}
+  {% endfor %}
+  <hr>
+
+  <p>{{ fruits|random }}</p>
+  <p>{{ 5|add:10 }}</p>
+
+  {% lorem 5 w random %}
+  <hr>
+  {{ my_sentence|truncatewords:1 }}
+  <br>
+  {{ my_sentence|truncatechars:5 }}
+  <br>
+  {{ my_sentence|capfirst }}
+  <hr>
+  {% now "SHORT_DATETIME_FORMAT" as current_time%}
+  Copyright {{ current_time }}
+  <hr>
+  {{ date_time|date:'D d M Y' }}
+</body>
+</html>

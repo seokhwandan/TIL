@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>로또 당첨 횟수를 알아보자.</h1>
+  <hr>
+  <h2>이번 회차 당첨 번호 : {{ num }} + {{ bonus }}</h2>
+  <ul>
+    <li>1등 : {{ 1등 }}</li>
+    <li>2등 : {{ 2등 }}</li>
+    <li>3등 : {{ 3등 }}</li>
+    <li>4등 : {{ 4등 }}</li>
+    <li>5등 : {{ 5등 }}</li>
+    <li>꽝 : {{ 꽝 }}</li>
+  </ul>
+{% endblock content %}
