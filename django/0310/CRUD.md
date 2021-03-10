@@ -1,3 +1,7 @@
+Create, Read, Update, Delete
+
+
+
 django-admin startproject crud
 
 python manage.py startapp articles
