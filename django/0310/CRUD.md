@@ -2,9 +2,9 @@ Create, Read, Update, Delete
 
 
 
-django-admin startproject crud
+#### django-admin startproject crud
 
-python manage.py startapp articles
+#### python manage.py startapp articles
 
 - crud/settings.py 에서 INSTALLED_APPS 에 articles 추가
 
@@ -20,16 +20,16 @@ python manage.py startapp articles
 
   
 
-python manage.py makemigrations
+#### python manage.py makemigrations
 
-python manage.py migrate
+#### python manage.py migrate
 
-pip install django-extensions
+#### pip install django-extensions
 
 - 장고의 확장프로그램 설치
 - crud/settings.py 에서 INSTALLED_APPS 에 django_extensions 추가
 
-python manage.py shell_plus
+#### python manage.py shell_plus
 
 - exit
 
@@ -45,11 +45,11 @@ python manage.py shell_plus
       updated_at = models.DateTimeField(auto_now=True)
   ```
 
-python manage.py makemigrations
+#### python manage.py makemigrations
 
-python manage.py migrate
+#### python manage.py migrate
 
-python manage.py sehll_plus
+#### python manage.py sehll_plus
 
 ```
 article = Article()
@@ -66,7 +66,7 @@ create 하는 방법 3가지
 
 
 
-articles/admin.py
+#### articles/admin.py
 
 - from .models import Article
 - admin.site.register(Article)
