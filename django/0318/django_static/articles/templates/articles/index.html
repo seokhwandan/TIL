@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'articles/css/index.css' %}">
+{% endblock css %}
+
+{% block content %}
+<h2 class="blue">INDEX</h2>
+<img src="{% static 'articles/img/sample.jpg' %}" alt="sample">
+<a href="{% url 'articles:create' %}">NEW</a>
+<hr>
+<ol>
+  {% for article in articles %}
+    <li>{{ article.title }}</li>
+    <a href="{% url 'articles:detail' article.pk %}">DETAIL</a>
+  {% endfor %}
+</ol>
+{% endblock content %}
