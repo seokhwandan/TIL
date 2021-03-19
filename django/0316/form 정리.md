@@ -12,7 +12,7 @@ class ArticleForm(forms.Form):
 	content = forms.CharField(widget=forms.Textarea)
 ```
 
-##### 
+
 
 ##### new.html
 
@@ -137,7 +137,7 @@ def create(request):
         
         if form.is_valid():
             article = form.save()
-            return redirect('articles:index')
+            return redirect('articles:detail', article.pk)
 
     else:
         # def new : page 를 보여주는 동작 (new 는 GET 으로 요청하기 때문에)
