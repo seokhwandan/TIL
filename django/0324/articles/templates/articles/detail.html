@@ -17,6 +17,7 @@
   <a href="{% url 'articles:index' %}">[back]</a>
   <hr>
   <h4>댓글 목록</h4>
+  <p>{{ comments|length }}개의 댓글이 있습니다.</p>
   <ul>
     {% for comment in comments %}
       <li>
@@ -26,6 +27,8 @@
           <button>삭제</button>
         </form>
       </li>
+    {% empty %}
+      <p>아직 댓글이 없네요..</p>
     {% endfor %}
   </ul>
   <form action="{% url 'articles:comments_create' article.pk %}" method="POST">
