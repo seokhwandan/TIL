@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>INDEX PAGE</h2>
+  <a href="{% url 'articles:create' %}">create</a>
+  {% for article in articles %}
+    <p>{{ article.title }}</p>
+    <p>{{ article.content }}</p>
+    <a href="{% url 'articles:detail' article.pk %}">DETAIL</a>
+  {% endfor %}
+{% endblock content %}
