@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top mb-4">
+  <div class="container-fluid d-flex">
+      <a class="navbar-brand" href="{% url 'articles:index' %}">either project</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div class="d-flex justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'articles:create' %}">new</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'articles:random_detail' %}">random</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+  <h2 class="text-center">{{ article.title }}</h2>
+  <div class="d-flex justify-content-between">
+    <h4 class="text-danger">{{ article.topic1 }}</h4>
+    <h4 class="text-primary">{{ article.topic2 }}</h4>
+  </div>
+  {% if per1 == 0 and per2 == 0 %}
+    <div class="progress" style="height: 25px">
+      <div class="progress-bar progress-bar-striped bg-danger fs-5" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">0</div>
+      <div div class="progress-bar progress-bar-striped fs-5" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">0</div>
+    </div>
+  {% else %}
+    <div class="progress" style="height: 25px">
+      <div class="progress-bar progress-bar-striped bg-danger fs-5" role="progressbar" style="width: {{ per1 }}%" aria-valuenow="{{ per1 }}" aria-valuemin="0" aria-valuemax="100">{{ per1 }}% ({{ count1 }})</div>
+      <div div class="progress-bar progress-bar-striped fs-5" role="progressbar" style="width: {{ per2 }}%" aria-valuenow="{{ per2 }}" aria-valuemin="0" aria-valuemax="100">{{ per2 }}% ({{ count2 }})</div>
+    </div>
+  {% endif %}
+  <hr>
+  {% if comments|length %}
+    <p>{{ comments|length }}개의 댓글이 있습니다.</p>
+  {% endif %}
+  {% for comment in comments %}
+  <ul>
+    {% if comment.pick == 1 %}
+      <li>
+        <p class="text-danger fw-bold">{{ article.topic1 }}</p>
+        <p> - {{ comment.content }}</p>
+      </li>
+    {% else %}
+      <li>
+        <p class="text-primary fw-bold">{{ article.topic2 }}</p>
+        <p> - {{ comment.content }}</p>
+      </li>
+    {% endif %}
+  </ul>
+  {% empty %}
+    <p>댓글이 없습니다.</p>
+  {% endfor %}
+  <hr>
+  <form action="{% url 'articles:comments_create' article.pk %}" method="POST">
+    {% csrf_token %}
+    {% bootstrap_form comment_form layout='horizontal' %}
+    <button class="btn btn-primary mt-3">댓글 달기</button>
+  </form>
+  <div class="d-flex justify-content-end">
+    <a class="btn btn-primary" href="{% url 'articles:index' %}">뒤로가기</a>
+  </div>
+{% endblock content %}
