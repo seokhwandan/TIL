@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+  {% with followings=person.followings.all followers=person.followers.all %}
+    <div class="row row-cols-auto">
+      <div class="col">
+        <h2>{{ person.username }}</h2>
+      </div>
+      {% if request.user != person %}
+        <div class="col">
+          <form action="{% url 'accounts:follow' person.username %}" method="POST">
+            {% csrf_token %}
+            {% if request.user in followers %}
+              <button class="btn btn-danger">팔로우 취소</button>
+            {% else %}
+              <button class="btn btn-primary">팔로우</button>
+            {% endif %}
+          </form>
+        </div>
+      {% endif %}
+    </div>
+    <div>
+      게시글 {{ person.article_set.all|length }}
+      팔로워 {{ followers|length }}
+      팔로우 {{ followings|length }}
+    </div>
+    <hr>
+    <b>{{ person.username }} 님이 팔로우한 사람들</b>
+    <br>
+    -
+    {% for following in followings %}
+      {{ following }}
+    {% endfor %}
+    <br>
+    <b>{{ person.username }} 을 팔로우한 사람들</b>
+    <br>
+    -
+    {% for follower in followers %}
+      {{ follower }}
+    {% endfor %}
+    <hr>
+  {% endwith %}
+  <h3> 게시글 </h3>
+  {% for article in person.article_set.all %}
+    <div><b><a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a></b></div>
+    <div>
+      <p>{{ article.content }}</p>
+      <div>
+        {% if article.like_users.all.count != 0 %}
+          {% for like in article.like_users.all %}
+            <i class="fas fa-heart fa-lg" style="color:crimson"></i>
+          {% endfor %}
+          <p>{{ article.like_users.all|length }}명이 좋아요를 눌렀습니다.</p>
+        {% else %}
+          <p>좋아요가 없습니다.</p>
+        {% endif %}
+        <hr>
+      </div>
+    </div>
+  {% endfor %}
+  <a href="{% url 'articles:index' %}">BACK</a>
+{% endblock content %}
