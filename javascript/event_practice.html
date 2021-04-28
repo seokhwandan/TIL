@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <form action="">
+    <input type="text">
+    <button>Add</button>
+  </form>
+  <ul></ul>
+
+  <script>
+    
+    let ul = document.querySelector('ul')
+    let btn = document.querySelector('button')
+    btn.addEventListener('click', function (event) {
+      event.preventDefault()
+      let input = document.querySelector('input')
+      let li = document.createElement('li')
+      if (input.value.trim()) {
+        li.innerText = input.value
+        ul.appendChild(li)
+      } else {
+        alert('값을 입력해 주십시오.')
+      }
+      input.value = ""
+    })
+
+  </script>
+</body>
+</html>
